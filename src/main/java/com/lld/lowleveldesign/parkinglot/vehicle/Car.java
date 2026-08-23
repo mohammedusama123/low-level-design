@@ -2,8 +2,8 @@ package com.lld.lowleveldesign.parkinglot.vehicle;
 
 public class Car extends Vehicle{
     
-    public Car(String vehicleNumber) {
-        super(vehicleNumber);
+    public Car(String vehicleNumber, VehicleType type) {
+        super(vehicleNumber, type);
     }
 
     @Override

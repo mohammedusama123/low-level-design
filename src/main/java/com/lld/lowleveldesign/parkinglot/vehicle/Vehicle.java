@@ -9,8 +9,9 @@ public abstract class Vehicle {
     private String vehicleNumber;
     VehicleType vehicleType;
     
-    public Vehicle(String vehicleNumber) {
+    public Vehicle(String vehicleNumber, VehicleType vehicleType) {
         this.vehicleNumber = vehicleNumber;
+        this.vehicleType = vehicleType;
     }
     
     public String getVehicleNumber() {

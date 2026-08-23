@@ -1,6 +1,7 @@
 package com.lld.lowleveldesign.parkinglot.pricingStrategy;
 
 import com.lld.lowleveldesign.parkinglot.ParkingTicket;
+import com.lld.lowleveldesign.parkinglot.vehicle.VehicleType;
 
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -13,7 +14,13 @@ public class HourlyPricingStrategy extends PricingStrategy{
         if(hours < 1) {
             hours = 1;
         }
-        double fee = hours * 20.0;
+        double fee;
+        if(ticket.getVehicle().getVehicleType().equals(VehicleType.BIKE)) {
+            fee = hours * 20.0;
+        }
+        else {
+            fee = hours * 40.0;
+        }
         return fee;
     }
 }
